@@ -1,0 +1,182 @@
+:root {
+  --brand-color: #ff6b35;
+  --brand-dark: #1b1f3b;
+}
+
+body {
+  font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+  background-color: #f8f9fa;
+}
+
+.navbar-brand span {
+  color: var(--brand-color);
+}
+
+.hero-section {
+  background: linear-gradient(135deg, var(--brand-dark) 0%, #3a3f7a 100%);
+  color: #fff;
+  padding: 100px 0 220px 0;
+}
+.search-card {
+  margin-top: 40px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.feature-card {
+  border: none;
+  border-radius: 12px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+.feature-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.feature-icon {
+  font-size: 2rem;
+  color: var(--brand-color);
+}
+
+.testimonial-card {
+  border-radius: 12px;
+  border: none;
+  background: #fff;
+}
+
+.btn-brand {
+  background-color: var(--brand-color);
+  border-color: var(--brand-color);
+  color: #fff;
+}
+
+.btn-brand:hover {
+  background-color: #e85a2a;
+  border-color: #e85a2a;
+  color: #fff;
+}
+
+footer a {
+  color: #ddd;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: var(--brand-color);
+}
+
+/* Route-aware navigation */
+.navbar .nav-link {
+  position: relative;
+  transition: color 0.2s ease;
+}
+
+.navbar .nav-link.active {
+  color: var(--brand-color) !important;
+  font-weight: 700;
+}
+
+.navbar .nav-link.active::after {
+  content: '';
+  position: absolute;
+  left: 0.75rem;
+  right: 0.75rem;
+  bottom: 0.2rem;
+  height: 2px;
+  border-radius: 999px;
+  background: var(--brand-color);
+}
+
+.navbar .active-brand span {
+  color: var(--brand-color);
+}
+
+.page-content {
+  min-height: 60vh;
+}
+
+.not-found-page {
+  min-height: calc(100vh - 56px);
+  background:
+    radial-gradient(circle at 50% 30%, rgba(255, 107, 53, 0.12), transparent 35%),
+    #f8f9fa;
+}
+
+.not-found-icon {
+  width: 92px;
+  height: 92px;
+  margin-inline: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(255, 107, 53, 0.12);
+  color: var(--brand-color);
+  font-size: 2.75rem;
+}
+
+.text-brand {
+  color: var(--brand-color);
+}
+
+@media (max-width: 991.98px) {
+  .navbar .nav-link.active::after {
+    left: 0;
+    right: auto;
+    width: 42px;
+  }
+
+  .not-found-page h1 {
+    font-size: 2.6rem;
+  }
+}
+
+/* Destination cards */
+.destination-card {
+  border-radius: 18px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.destination-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 38px rgba(27, 31, 59, 0.12) !important;
+}
+
+.destination-card-top {
+  min-height: 150px;
+  padding: 1.5rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  background: linear-gradient(135deg, #1b1f3b, #3a3f7a);
+}
+
+.destination-icon {
+  width: 58px;
+  height: 58px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.14);
+  color: #fff;
+  font-size: 1.7rem;
+  backdrop-filter: blur(8px);
+}
+
+.destination-tag {
+  padding: 0.4rem 0.75rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.14);
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+@media (max-width: 575.98px) {
+  .destination-card-top {
+    min-height: 125px;
+  }
+}
