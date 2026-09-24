@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wanderly</title>
+    <script>
+      // GitHub Pages fallback for the Vite SPA. It sends the original route
+      // to index.html, where the app restores it with history.replaceState().
+      (function () {
+        var path = window.location.pathname
+        var base = '/wanderly/'
+        if (path.indexOf(base) === 0) {
+          var route = path.slice(base.length - 1) || '/'
+          var target = base + '?p=' + encodeURIComponent(route) + window.location.search
+          window.location.replace(target)
+        }
+      })()
+    </script>
+  </head>
+  <body>
+    <noscript>JavaScript is required to run Wanderly.</noscript>
+  </body>
+</html>
